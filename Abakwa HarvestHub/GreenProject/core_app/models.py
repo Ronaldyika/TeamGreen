@@ -7,7 +7,7 @@ class BaseModel(models.Model):
        author: christian
        description: This model will be inherited by all the models
     '''
-    id = models.IntegerField()
+    id = models.AutoField(primary_key=True)
     is_deleted = models.BooleanField()
     created_at = models.DateField(auto_now=False, auto_now_add=False)
     modified_at = models.DateField(auto_now=False, auto_now_add=False)
