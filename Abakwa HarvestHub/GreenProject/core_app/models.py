@@ -8,9 +8,9 @@ class BaseModel(models.Model):
        description: This model will be inherited by all the models
     '''
     id = models.AutoField(primary_key=True)
-    is_deleted = models.BooleanField()
-    created_at = models.DateField(auto_now=False, auto_now_add=False)
-    modified_at = models.DateField(auto_now=False, auto_now_add=False)
+    is_deleted = models.BooleanField( default = False)
+    created_at = models.DateTimeField(null=True, blank=True)
+    modified_at = models.DateTimeField(null=True, blank=True)
 
 
 class Updates(BaseModel):

@@ -5,20 +5,17 @@ from .forms import CreateFarmForm
 
 # Create your views here.
 
-#creating a farm
+
 @login_required
-def getFarmInfo(request):
-    farm_info = Farm_info.objects.first()
-    return render(request, 'farm.html', {'farm_info': farm_info})
-
-# Creating a farm
-
 def createFarm(request):
     form = CreateFarmForm()
-    if request.method == "POST":
+    if request.method == 'POST':
         form = CreateFarmForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('getFarmInfo')
+            farm_info = form.save(commit=False)
+            farm_info.user_id = request.user
+            farm_info.save()
+            return redirect('get_farm_info')
     else:
         return render(request, 'createfarm.html', {'form': form})
+    

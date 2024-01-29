@@ -1,71 +1,29 @@
 {% extends 'navbar/navbar.html' %} 
 {% block title %}Your Farm{% endblock %}
-    {% block content %}
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-          <div class="col-md-12">
-            <div class="row">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Moisture</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-                      <p class="card-text">{{farm_info.moisture}}</p>
-                      <a href="#" class="card-link">Card link</a>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Moisture</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-                      <p class="card-text">{{farm_info.moisture}}</p>
-                      <a href="#" class="card-link">Card link</a>
-                    </div>
-                  </div>
-                  <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Moisture</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-                      <p class="card-text badge bg-primary text-wrap ">{{farm_info.moisture}}</p>
-                      <a href="#" class="card-link">Card link</a>
-                    </div>
-                  </div>
-    
-              </div>
-            </div>
-            <br>
-          <div class="col-md-12">
-            <div class="row">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Moisture</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-                      <p class="card-text">{{farm_info.moisture}}</p>
-                      <a href="#" class="card-link">Card lik</a>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Moisture</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-                      <p class="card-text">{{farm_info.moisture}}</p>
-                      <a href="#" class="card-link">Card lik</a>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Moisture</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-                      <p class="card-text">{{farm_info.moisture}}</p>
-                      <a href="#" class="card-link">Card lik</a>
-                    </div>
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+
+        <!-- Display Farms Information -->
+        {% for farm in farm_info %}
+        <div class='col-md-3 col-lg-3'>
+            <div class='card'>
+                <div class='card-body'>
+                    <h5 class='card-title'>{{ farm.name }}</h5>
+                    <p class='card-text'>Moisture: {{ farm.moisture }}</p>
+                    <p class='card-text'>Temperature: {{ farm.temperature }}</p>
+                    <p class='card-text'>Light Intensity: {{ farm.light_intensity }}</p>
+                    <p class='card-text'>Humidity: {{ farm.humidity }}</p>
+                    <p class='card-text'>Soil pH: {{ farm.soil_ph }}</p>
                 </div>
             </div>
-          </div>
         </div>
-        <a href="#">
-            <button type="button" class="btn btn-success">Add a Farm +</button>
-        </a>
-      </div>
-      <br>
-    {% endblock %}
+        {% endfor %}
+
+    </div>
+    <a href="{% url 'create_farm' %}">
+        <button type="button" class="btn btn-success mt-3">Add Farms</button>
+    </a>
+</div>
+<br>
+{% endblock %}

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, RegisterForm
 from django.contrib.auth.models import User
+from monitoring.models import Farm_info
 from django.contrib.auth.decorators import login_required
 from .models import Updates,TutorialPoint,CreditUnion
 
@@ -37,3 +38,9 @@ def get_updates(request):
     query_set = Updates.objects.all()
     return render(request, 'Authentication/notification/notification.html', {'query_set': query_set,'details':details})
 	
+
+@login_required
+def getFarmInfo(request):
+    farm_info = Farm_info.objects.all()
+    return render(request, 'monitoring/templates/farm.html', {'farm_info': farm_info})
+# Creating a farm

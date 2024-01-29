@@ -1,12 +1,50 @@
 {% extends 'navbar/navbar.html' %} 
 {% block title %}Your Farm{% endblock %}
-    {% block content %}
-       <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
 
+{% block content %}
+  <div class="container mt-4 mb-4">
+    <div class="card-1 mt-4 mb-4">
+      <div class="row">
+        <div class='col-md-6 col-lg-6'>
+          <form method="post">
+            {% csrf_token %}
+            
+            <div class="mb-3">
+              <label for="name" class="form-label">Farm Name</label>
+              <input type="text" placeholder='enter name' class="form-control" id="name" name="name" required>
+            </div>
 
-        <button type="submit" class="btn btn-success">Create</button>
-       </form>
+            <div class="mb-3">
+              <label for="moisture" class="form-label">Moisture</label>
+              <input type="number" placeholder="disabled" class="form-control" id="moisture" name="moisture" disabled>
+            </div>
 
-    {% endblock %}
+            <div class="mb-3">
+              <label for="light_intensity" placeholder="disabled" class="form-label">Light Intensity</label>
+              <input type="number"  placeholder="disabled" class="form-control" id="light_intensity" name="light_intensity" disabled>
+            </div>
+
+            <button type="submit" class="btn btn-success">Create</button>
+          </form>
+        </div>
+
+        <div class='col-md-6 col-lg-6'>
+          <div class="mb-3">
+            <label for="temperature" class="form-label">Temperature</label>
+            <input type="number" placeholder="disabled" class="form-control" id="temperature" name="temperature" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label for="humidity" class="form-label">Humidity</label>
+            <input type="number" placeholder="disabled" class="form-control" id="humidity" name="humidity" disabled>
+          </div>
+
+          <div class="mb-3">
+            <label for="soil_ph" class="form-label">Soil pH</label>
+            <input type="number" placeholder="disabled" class="form-control" id="soil_ph" name="soil_ph" disabled>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
