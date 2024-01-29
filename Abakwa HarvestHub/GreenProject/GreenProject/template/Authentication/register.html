@@ -1,0 +1,96 @@
+{% extends 'navbar/navbar.html' %} {% block title %}RegisterUser{% endblock %}
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="text-center">User Registration</h3>
+        </div>
+        <div class="card-body">
+          <form method="post">
+            {% csrf_token %}
+
+            <!-- Name Field -->
+            <div class="mb-3">
+              <label for="id_name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="id_name"
+                name="username"
+                required
+              />
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-3">
+              <label for="id_email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="id_email"
+                name="email"
+                required
+              />
+            </div>
+
+            <!-- Location Field -->
+            <div class="mb-3">
+              <label for="id_location" class="form-label">Location</label>
+              <input
+                type="text"
+                class="form-control"
+                id="id_location"
+                name="location"
+                required
+              />
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="mb-3">
+              <label for="id_phone" class="form-label">Phone Number</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="id_phone"
+                name="phone"
+                required
+              />
+            </div>
+            {% comment %} password fieilds {% endcomment %}
+
+            <div class="mb-3">
+              <label for="id_location" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="id_location"
+                name="password"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="id_location" class="form-label"
+                >Comfirm Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="id_location"
+                name="password2"
+                required
+              />
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-success">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+{% endblock %}

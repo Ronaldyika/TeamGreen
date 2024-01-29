@@ -46,17 +46,11 @@
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="index-2.html"
+                  href="{% url 'index' %}"
                   role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
                 >
                   Home
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a href="home-three.html">Home Three</a></li>
-                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
@@ -70,25 +64,12 @@
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Events
+                  Contact
                 </a>
                 <ul class="dropdown-menu">
                   <li><a href="events-grid.html">Events Grid</a></li>
                   <li><a href="events-grid-2.html">Events Grid Two</a></li>
                 </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="causes.html"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Causes
-                </a>
-                <ul class="dropdown-menu"></ul>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -101,9 +82,6 @@
                 >
                   Blogs
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a href="blog.html">Blog Default</a></li>
-                </ul>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -116,20 +94,6 @@
                 >
                   Pages
                 </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="#">Projects</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="projects.html">Projects</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="team.html">Team</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="team.html">Team One</a></li>
-                    </ul>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
@@ -141,11 +105,11 @@
         <div class="item">
           <div class="slider-caption h2slider">
             <div class="container">
-              <strong><span>Please</span> Stop Hunting & </strong>
-              <h1>Save WildLife</h1>
-              <p>of <strong>endangered animals</strong> in the world</p>
-              <a href="#" class="active">Find Out More</a>
-              <a href="#">Join us Now</a>
+              <strong> Green Life </strong>
+              <h1>Welcomes You</h1>
+              <p><strong>Lets Build a Sustainable</strong> world</p>
+              <a href="{% url 'register' %}" class="active">Join Us Today</a>
+              <a href="{% url 'login' %}">Login</a>
             </div>
           </div>
           <img src=" {% static 'images/h2-slide2.jpg' %}" alt="" />
@@ -153,11 +117,11 @@
         <div class="item">
           <div class="slider-caption h2slider">
             <div class="container">
-              <strong>Save <span> & don’t waste our life</span> partner</strong>
-              <h1>Water Resource</h1>
-              <p>Before <strong>it’s too late</strong> for us...</p>
-              <a href="#" class="active">Find Out More</a>
-              <a href="#">Join us Now</a>
+              <strong>Save <span> Our Resources</span> </strong>
+              <h1>Food Availability</h1>
+              <p>Lets <strong> Fund Our </strong> Agriculture...</p>
+              <a href="" class="active">Find Out More</a>
+              <a href="{% url 'register' %}">Join Us Today</a>
             </div>
           </div>
           <img src=" {% static 'images/h2-slide3.jpg' %}" alt="" />
@@ -169,11 +133,11 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h1>Why Ecova!</h1>
+              <h1>Why Us!....</h1>
               <p>
-                Let’s Join us to do something awesome to Save Water, Energey,
-                Control Pollution & Environment, Wildlife, Forest Planting
-                Implant for Solar System.
+                Let’s Join us to do something awesome for a Sustainable,
+                relaible, Controled & Environment, for ensuring food
+                Availability
               </p>
               <a href="#" class="cus">Signup to Join us</a>
             </div>
@@ -190,7 +154,7 @@
               <div class="col-lg-4 col-md-6 col-sm-6">
                 <!--Footer Widget Start-->
                 <div class="footer-widget">
-                  <h4>About Ecova</h4>
+                  <h4>About Us</h4>
                   <p>
                     If anything’s hot in today’s economy, it’s saving money,
                     including a broad range of green businesses helping people
