@@ -1,0 +1,71 @@
+{% extends 'navbar/navbar.html' %} 
+{% block title %}Your Farm{% endblock %}
+    {% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <div class="row">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Moisture</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+                      <p class="card-text">{{farm_info.moisture}}</p>
+                      <a href="#" class="card-link">Card link</a>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Moisture</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+                      <p class="card-text">{{farm_info.moisture}}</p>
+                      <a href="#" class="card-link">Card link</a>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Moisture</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+                      <p class="card-text badge bg-primary text-wrap ">{{farm_info.moisture}}</p>
+                      <a href="#" class="card-link">Card link</a>
+                    </div>
+                  </div>
+    
+              </div>
+            </div>
+            <br>
+          <div class="col-md-12">
+            <div class="row">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Moisture</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+                      <p class="card-text">{{farm_info.moisture}}</p>
+                      <a href="#" class="card-link">Card lik</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Moisture</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+                      <p class="card-text">{{farm_info.moisture}}</p>
+                      <a href="#" class="card-link">Card lik</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Moisture</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+                      <p class="card-text">{{farm_info.moisture}}</p>
+                      <a href="#" class="card-link">Card lik</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <a href="#">
+            <button type="button" class="btn btn-success">Add a Farm +</button>
+        </a>
+      </div>
+      <br>
+    {% endblock %}

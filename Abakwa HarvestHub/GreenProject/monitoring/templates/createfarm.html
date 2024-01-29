@@ -1,0 +1,12 @@
+{% extends 'navbar/navbar.html' %} 
+{% block title %}Your Farm{% endblock %}
+    {% block content %}
+       <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+
+        <button type="submit" class="btn btn-success">Create</button>
+       </form>
+
+    {% endblock %}
