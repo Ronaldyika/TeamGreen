@@ -15,11 +15,21 @@ class BaseModel(models.Model):
 
 class Updates(BaseModel):
     '''
-       author: christian
-       description: This model store information about world updates concerned by
-       Agriculture and Farming
+    author: christian
+    description: This model stores information about world updates concerned by
+    Agriculture and Farming
     '''
     title = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='media/')  # Adjusted path to a subdirectory
+    message = models.TextField()  # Changed from CharField to TextField for potentially longer text
+    date_added = models.DateTimeField(auto_now_add=True)
+
+
+
+
+
+    def __str__(self):
+        return self.title
 
 class Area(BaseModel):
     '''
@@ -34,6 +44,18 @@ class Categories(BaseModel):
        description: The categories are under the areas e.g Beans, Livestock
     '''
     area_id = models.ForeignKey("Area",on_delete=models.CASCADE)
-    image = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None)
+    image = models.ImageField(upload_to='media', height_field=None, width_field=None, max_length=None)
     text = models.TextField()
     tuto_url = models.URLField(max_length=500)
+
+
+class TutorialPoint(models.Model):
+    title = models.CharField(max_length=20)
+    image = models.ImageField(upload_to='media/')
+    link = models.CharField(max_length=255)
+    date_added = models.DateField(auto_now_add = True)
+
+
+    def __str__(self):
+        return self.title
+    
