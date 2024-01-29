@@ -7,6 +7,10 @@ from django.contrib.auth.models import User
 def homepage(request):
     return render(request,'index.html')
 
+
+def indexpage(request):
+    return render(request,'dashboard/main.html')
+
 def register(request):
     form = RegisterForm()
     if request.method == 'POST':

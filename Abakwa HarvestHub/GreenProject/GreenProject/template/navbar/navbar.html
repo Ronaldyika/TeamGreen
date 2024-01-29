@@ -43,6 +43,66 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+              {% if user.is_authenticated %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggl" href="{% url 'main' %}">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="blog.html"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Profile
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Credit Unions
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="events-grid.html"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Contact
+                </a>
+                              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="events-grid.html"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Notification
+                </a>
+              </li>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{% url 'logout' %}">
+                  logout
+                </a>
+              </li>
+              {% else %}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggl" href="{% url 'index' %}">
                   Home
@@ -67,30 +127,7 @@
                   <li><a href="events-grid-2.html">Events Grid Two</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="blog.html"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Blogs
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Pages
-                </a>
-              </li>
+              {% endif %}
             </ul>
           </div>
         </nav>
@@ -112,7 +149,6 @@
                 relaible, Controled & Environment, for ensuring food
                 Availability
               </p>
-              <a href="{% url 'register' %}" class="cus">Signup to Join us</a>
             </div>
           </div>
         </div>
