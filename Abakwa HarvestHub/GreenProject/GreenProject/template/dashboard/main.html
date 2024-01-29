@@ -1,4 +1,61 @@
-{% extends 'navbar/navbar.html' %} {% block title %}main{% endblock %} {%
-{% block content %}
+{% extends 'navbar/navbar.html' %}
+{% load static %}
 
+{% block title %}main{% endblock %}
+
+{% block content %}
+<section class="mt-4 mb-3">
+   <div class="item">
+      <div class="slider-caption h2slider mt-4">
+         <div class="container mt-4">
+            <strong>Sustainability<span> is the Best</span></strong>
+            <h1 class="display-4">Eco Friendly</h1>
+            <a href="#" class="btn btn-primary active">Find Out More</a>
+         </div>
+      </div>
+      <img src="{% static 'images/pic1.jpg' %}" alt="" class="img-fluid">
+   </div>
+</section>
+
+<section class="services-area wf100 mt-5 mb-5">
+   <div class="container mt-5 nb-3">
+      <ul class="list-unstyled d-flex">
+         <li class="flex-fill">
+            <div class="sinfo text-center">
+               <img src="images/sericon1.png" alt="" class="img-fluid">
+               <h6>Recycling</h6>
+               <p>Waste Management</p>
+            </div>
+         </li>
+         <li class="flex-fill">
+            <div class="sinfo text-center">
+               <img src="images/sericon2.png" alt="" class="img-fluid">
+               <h6>Wind Energy</h6>
+               <p>Polar, Prevailing, Tropical</p>
+            </div>
+         </li>
+         <li class="flex-fill">
+            <div class="sinfo text-center">
+               <img src="images/sericon3.png" alt="" class="img-fluid">
+               <h6>Pure Water</h6>
+               <p>Save Water Resources</p>
+            </div>
+         </li>
+         <li class="flex-fill active">
+            <div class="sinfo text-center">
+               <img src="images/sericon4.png" alt="" class="img-fluid">
+               <h6>Solar Panels</h6>
+               <p>Save Natural Energy</p>
+            </div>
+         </li>
+         <li class="flex-fill">
+            <div class="sinfo text-center">
+               <img src="images/sericon5.png" alt="" class="img-fluid">
+               <h6>Forest Planting</h6>
+               <p>Make Plants Alive for Life</p>
+            </div>
+         </li>
+      </ul>
+   </div>
+</section>
 {% endblock %}
