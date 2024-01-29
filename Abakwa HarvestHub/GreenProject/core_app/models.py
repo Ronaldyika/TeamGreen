@@ -20,6 +20,8 @@ class Updates(BaseModel):
        Agriculture and Farming
     '''
     title = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='media', height_field=None, width_field=None, max_length=None, default=None)
+    main_message = models.TextField(blank=True)
 
 class Area(BaseModel):
     '''
