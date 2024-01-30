@@ -9,6 +9,7 @@ from .models import Updates,TutorialPoint,CreditUnion
 # Home page
 def homepage(request):
     return render(request,'index.html')
+
 @login_required
 def aboutpage(request):
     return render(request,'dashboard/about.html')
@@ -16,6 +17,8 @@ def aboutpage(request):
 @login_required
 def indexpage(request):
     return render(request,'dashboard/main.html')
+
+
 # Registration
 def register(request):
     form = RegisterForm()
