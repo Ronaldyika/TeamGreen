@@ -4,7 +4,7 @@ from .forms import LoginForm, RegisterForm
 from django.contrib.auth.models import User
 from monitoring.models import Farm_info
 from django.contrib.auth.decorators import login_required
-from .models import Updates,TutorialPoint,CreditUnion
+from .models import Updates,TutorialPoint,CreditUnion,UpdateBlog
 
 # Home page
 def homepage(request):
@@ -41,8 +41,9 @@ def profile(request):
 @login_required
 def get_updates(request):
     details = TutorialPoint.objects.all()
+    blog = UpdateBlog.objects.all()
     query_set = Updates.objects.all()
-    return render(request, 'Authentication/notification/notification.html', {'query_set': query_set,'details':details})
+    return render(request, 'Authentication/notification/notification.html', {'query_set': query_set,'details':details,'blog':blog})
 	
 
 @login_required
