@@ -1,38 +1,56 @@
-{% extends 'navbar/navbar.html' %} {% block title %}notification{% endblock %}
+{% extends 'navbar/navbar.html' %}
+
+{% block title %}Notification{% endblock %}
+
 {% block content %}
 <div class="container mt-5 mb-3">
   <div class="row">
     <section class="tutorials mt-2 mb-2 container text-center">
-      <marquee>
-        <h3 class="display-4">Our Unions</h3>
-      </marquee>
+        <h3 class="display-4"><strong>Credit Unions</strong></h3>
+
       <div class="row">
-        {% for item in details %}
-        <div class="col-md-3 mt-3 mb-3">
+      {% for item in details %}
+
+        <div class="col-md-4 mt-3 mb-3">
           <div class="card">
-            <img
-              src="{{ item.image.url }}"
-              class="card-img-top mx-auto d-block mt-3"
-              alt="{{ item.name }}"
-            />
+            <a href="{{ item.link }}">
+              <img
+                src="{{ item.image.url }}"
+                class="card-img-top mx-auto d-block mt-3"
+                alt="{{ item.name }}"
+              />
+            </a>
+
             <div class="card-body">
-              <h5 class="card-title text-center">
-                <a href="{{ item.link }}">{{ item.link }}</a>
-              </h5>
+              <div class="row">
+                <div class="col-md-8 col-lg-8 text-left">
+                  <p>{{ item.location }}</p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                  <p>{{ item.address }}</p>
+                </div>
+              </div>
               <p class="text-muted text-center">
-                Date Added: {{ item.date_added }}
+                  <span>
+                  <div>
+                    <a href="{{ item.contact_link }}">Contact Us</a>
+                  </div>
+                </span>
               </p>
             </div>
           </div>
         </div>
-        {% endfor %} {% if details|length == 0 %}
-        <div class="container mt-5 mb-5">
-          <div class="row">
-            <h4 class="display-6">stay tuned for our partnerships</h4>
-          </div>
-        </div>
-        {% endif %}
+              {% endfor %}
       </div>
+
+
+      {% if details|length == 0 %}
+      <div class="container mt-5 mb-5">
+        <div class="row">
+          <h4 class="display-6">Stay tuned for our partnerships</h4>
+        </div>
+      </div>
+      {% endif %}
     </section>
   </div>
   {% endblock %}

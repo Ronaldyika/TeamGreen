@@ -4,58 +4,70 @@
 {% block title %}main{% endblock %}
 
 {% block content %}
-<section class="mt-4 mb-3">
-   <div class="item">
-      <div class="slider-caption h2slider mt-4">
-         <div class="container mt-4">
-            <strong>Sustainability<span> is the Best</span></strong>
-            <h1 class="display-4">Eco Friendly</h1>
-            <a href="#" class="btn btn-primary active">Find Out More</a>
+<section class="mt-5 mb-5">
+   <div class="container mt-4 text-center">
+      <h4>Meet Our Sponsors</h4>
+      <div class="card-2">
+         <div class="container mt-5 nb-3">
+            <ul class="d-flex">
+               <li class="flex-fill p-4 ">
+                  <div class="text-center">
+                     <a href="https://www.facebook.com" target="_blank"> <!-- Add the actual Facebook link -->
+                        <img src="{% static 'images/h3team8.jpg' %}" alt="" class="img-fluid rounded-circle">
+                     </a>
+                     <h6>Dr. Ange</h6>
+                     <p>Sponsor</p>
+                     <!-- Add social handler icon (for example, Bootstrap icon) -->
+                     <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+                  </div>
+               </li>
+               <li class="flex-fill p-4 ">
+                  <div class="text-center">
+                     <a href="https://www.twitter.com" target="_blank"> <!-- Add the actual Twitter link -->
+                        <img src="{% static 'images/h3team8.jpg' %}" alt="" class="img-fluid rounded-circle">
+                     </a>
+                     <h6>Dr. Jude</h6>
+                     <p>Sustainability Dev</p>
+                     <!-- Add social handler icon -->
+                     <a href="https://www.twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+                  </div>
+               </li>
+               <li class="flex-fill p-4">
+                  <div class="text-center">
+                     <a href="https://www.linkedin.com" target="_blank"> <!-- Add the actual LinkedIn link -->
+                        <img src="{% static 'images/h3team8.jpg' %}" alt="" class="img-fluid rounded-circle">
+                     </a>
+                     <h6>Sir Peter</h6>
+                     <p>Food Analyst</p>
+                     <!-- Add social handler icon -->
+                     <a href="https://www.linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+                  </div>
+               </li>
+               <li class="flex-fill p-4 active">
+                  <div class="text-center">
+                     <a href="https://www.instagram.com" target="_blank"> <!-- Add the actual Instagram link -->
+                        <img src="{% static 'images/h3team8.jpg' %}" alt="" class="img-fluid rounded-circle">
+                     </a>
+                     <h6>Dr. Jude</h6>
+                     <p>Sponsor</p>
+                     <!-- Add social handler icon -->
+                     <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                  </div>
+               </li>
+               <li class="flex-fill p-4">
+                  <div class="text-center">
+                     <a href="https://www.github.com" target="_blank"> <!-- Add the actual GitHub link -->
+                        <img src="{% static 'images/h3team8.jpg' %}" alt="" class="img-fluid rounded-circle">
+                     </a>
+                     <h6>Mrs Enya</h6>
+                     <p>Solar Energy</p>
+                     <!-- Add social handler icon -->
+                     <a href="https://www.github.com" target="_blank"><i class="bi bi-github"></i></a>
+                  </div>
+               </li>
+            </ul>
          </div>
       </div>
-      <img src="{% static 'images/pic1.jpg' %}" alt="" class="img-fluid">
-   </div>
-</section>
-
-<section class="services-area wf100 mt-5 mb-5">
-   <div class="container mt-5 nb-3">
-      <ul class="list-unstyled d-flex">
-         <li class="flex-fill">
-            <div class="sinfo text-center">
-               <img src="images/sericon1.png" alt="" class="img-fluid">
-               <h6>Recycling</h6>
-               <p>Waste Management</p>
-            </div>
-         </li>
-         <li class="flex-fill">
-            <div class="sinfo text-center">
-               <img src="images/sericon2.png" alt="" class="img-fluid">
-               <h6>Wind Energy</h6>
-               <p>Polar, Prevailing, Tropical</p>
-            </div>
-         </li>
-         <li class="flex-fill">
-            <div class="sinfo text-center">
-               <img src="images/sericon3.png" alt="" class="img-fluid">
-               <h6>Pure Water</h6>
-               <p>Save Water Resources</p>
-            </div>
-         </li>
-         <li class="flex-fill active">
-            <div class="sinfo text-center">
-               <img src="images/sericon4.png" alt="" class="img-fluid">
-               <h6>Solar Panels</h6>
-               <p>Save Natural Energy</p>
-            </div>
-         </li>
-         <li class="flex-fill">
-            <div class="sinfo text-center">
-               <img src="images/sericon5.png" alt="" class="img-fluid">
-               <h6>Forest Planting</h6>
-               <p>Make Plants Alive for Life</p>
-            </div>
-         </li>
-      </ul>
    </div>
 </section>
 {% endblock %}

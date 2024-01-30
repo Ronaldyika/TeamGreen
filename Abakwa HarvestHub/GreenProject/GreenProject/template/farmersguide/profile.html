@@ -5,52 +5,42 @@
 
 <style>
    body {
-      background-color: rgba(255, 255, 255, 0.8); /* Adjust the alpha value for transparency */
+      background-color: #f8f9fa; /* Use a light background color */
+   }
+
+   .card-img-top {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
    }
 </style>
 
 <section class="mt-4 mb-3">
-   <div class="item">
-      <div class="slider-caption h2slider mt-4">
-         <div class="container mt-4">
-            <div class='row'>
-               <div class='col-md-6 col-lg-6 text-center'> 
-                  <strong>Sustainability<span> is the Best</span></strong>
-                  <h1 class="display-4">Eco Friendly</h1>
-                  <a href="{% url 'get_farm_info' %}" class="btn btn-primary active">Survey Land</a>
-               </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6 col-lg-6 text-center">
+            <div class="jumbotron">
+               <h1 class="display-4">Sustainability</h1>
+               <p class="lead">Eco Friendly is the Best</p>
+               <a href="{% url 'get_farm_info' %}" class="btn btn-success btn-lg active" role="button">Survey Land</a>
+            </div>
+         </div>
 
-               <div class='col-md-6 col-lg-6'>
-                  <div class="bg-secondary">
-                     <img
-                        src="{{ user.profile.image.url }}"
-                        class="card-img-top rounded-circle mx-auto d-block mt-3"
-                        alt="{{ user.username }} Profile Image"
-                        style="width: 150px; height: 150px"/>
-                     <div class="card-body">
-                        <h5 class="card-title">{{ user.username }}</h5>
-                        <p class="">{{ user.email }}</p>
-                     </div>
+         <div class="col-md-4 col-lg-4">
+            <div class="card border-0 shadow-sm">
+               <img src="{{ user.image.url }}" class="card-img-top rounded-circle mx-auto d-block mt-3" alt="{{ user.username }} Profile Image">
+               <div class="card-body bg-light">
+                  <h5 class="card-title mt-3 text-center">{{ user.username }}</h5>
+                  <p class="card-text text-center text-muted">{{ user.email }}</p>
+               </div>
+               <div class="card-footer bg-light border-0">
+                  <div class="text-center">
+                     <button type="button" class="btn btn-outline-secondary btn-sm ml-2"><a href="+237651211000">Contact  Us</button>
                   </div>
                </div>
             </div>
          </div>
       </div>
-      <img src="{% static 'images/pic1.jpg' %}" alt="" class="img-fluid">
-   </div>
-</section>
-
-<section class="services-area wf100 mt-5 mb-5">
-   <div class="container mt-5 nb-3">
-      <ul class="list-unstyled d-flex">
-         <li class="flex-fill">
-            <div class="sinfo text-center">
-               <h6>Recycling</h6>
-               <p>Waste Management</p>
-            </div>
-         </li>
-         <!-- ... (Other list items) ... -->
-      </ul>
    </div>
 </section>
 

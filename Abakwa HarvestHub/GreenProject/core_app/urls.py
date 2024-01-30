@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns=[
     path('core/', include('monitoring.urls')),
+    path('about/',views.aboutpage,name='about'),
     path('core/farm/', views.getFarmInfo, name="get_farm_info"),
     path('',views.homepage,name='index'),
     path('register/',views.register,name='register'),

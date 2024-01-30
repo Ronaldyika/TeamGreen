@@ -9,6 +9,9 @@ from .models import Updates,TutorialPoint,CreditUnion
 # Home page
 def homepage(request):
     return render(request,'index.html')
+@login_required
+def aboutpage(request):
+    return render(request,'dashboard/about.html')
 
 @login_required
 def indexpage(request):

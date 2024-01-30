@@ -50,7 +50,7 @@ class Categories(BaseModel):
 
 
 class TutorialPoint(models.Model):
-    title = models.CharField(max_length=20)
+    title = models.CharField(max_length=60)
     image = models.ImageField(upload_to='media/')
     link = models.CharField(max_length=255)
     date_added = models.DateField(auto_now_add = True)
@@ -62,6 +62,8 @@ class TutorialPoint(models.Model):
 class CreditUnion(models.Model):
     name = models.CharField(max_length=50)
     image = models.ImageField(upload_to='media/')
+    location = models.CharField(max_length=65)
+    address = models.CharField(max_length= 50)
     link = models.CharField(max_length=255)
     date_added = models.DateField(auto_now_add = True)
 

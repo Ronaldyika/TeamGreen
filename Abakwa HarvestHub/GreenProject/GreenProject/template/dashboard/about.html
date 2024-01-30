@@ -1,0 +1,77 @@
+{% extends 'navbar/navbar.html' %} {% block title %}About{% endblock %}
+
+{% load static %}
+{% block content %}
+<div class="container mt-5 mb-3">
+  <div class="row">
+  <h4 class='text-center container' style="color:green;" ><strong>ABOUT HARVESTINGHUB</strong></h4>
+  <div class="firstwrapper mt-5">
+  <div class="row mt-4 mb-4">
+    <div class="col-md-4 col-lg-4 ">
+      <img src="{% static 'images/h3team8.jpg' %}" style="width:90px; height:90px" alt="image"/>
+  
+  
+  </div>
+  <div class="col-md-8 col-lg-8 ">
+  <h5 class="display-5 text-center" style="color:green;">Credit Unions</h5>
+  <p>
+    Erosion: Heavy rainfall and steep slopes contribute to topsoil erosion, which removes essential nutrients and organic matter.
+    Leaching: Excessive rainfall can wash away soluble nutrients like nitrogen and potassium
+  </p>
+  
+  </div>
+  
+  </div>
+  <div class="row mt-4 mb-4">
+    <div class="col-md-8 col-lg-8">
+      <h5 class="display-5 text-center" style="color:green;">Credit Unions</h5>
+  <p>
+    Erosion: Heavy rainfall and steep slopes contribute to topsoil erosion, which removes essential nutrients and organic matter.
+    Leaching: Excessive rainfall can wash away soluble nutrients like nitrogen and potassium
+  </p>
+
+  </div>
+  <div class="col-md-4 col-lg-4">
+      
+  <img src="{% static 'images/h3team8.jpg' %}" style="width:90px; height:90px;" alt="image"/>
+  
+  </div>
+  
+  </div>
+
+  </div>
+     <div class="container mt-4 text-center">
+      <h4>Meet Our Sponsors</h4>
+      <div class="card-2">
+         <div class="container mt-5 nb-3">
+         <div class="card">
+                     <ul class="d-flex">
+               <li class="flex-fill p-4 ">
+                  <div class="text-center">
+                     <a href="https://www.facebook.com" target="_blank"> <!-- Add the actual Facebook link -->
+                        <img src="{% static 'images/h3team8.jpg' %}" alt="" class="img-fluid rounded-circle">
+                     </a>
+                     <h6>Dr. Ange</h6>
+                     <p>Sponsor</p>
+                     <!-- Add social handler icon (for example, Bootstrap icon) -->
+                     <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+                  </div>
+               </li>
+               <li class="flex-fill p-4">
+                  <div class="text-center">
+                     <a href="https://www.github.com" target="_blank"> <!-- Add the actual GitHub link -->
+                        <img src="{% static 'images/h3team8.jpg' %}" alt="" class="img-fluid rounded-circle">
+                     </a>
+                     <h6>Mrs Enya</h6>
+                     <p>Solar Energy</p>
+                     <!-- Add social handler icon -->
+                     <a href="https://www.github.com" target="_blank"><i class="bi bi-github"></i></a>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

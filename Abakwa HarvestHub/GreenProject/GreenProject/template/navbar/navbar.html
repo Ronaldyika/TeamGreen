@@ -27,8 +27,8 @@
       <!--Header Start-->
       <header class="header-style-2">
         <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="index-2.html">
-            <img src="{% static 'images/h2logo.png' %}" alt="" />
+          <a class="navbar-brand" href="{% url "main" %}">
+            <img src="{% static 'images/mainl.png' %}" alt="" />
           </a>
           <button
             class="navbar-toggler"
@@ -45,8 +45,8 @@
             <ul class="navbar-nav mr-auto">
               {% if user.is_authenticated %}
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggl" href="{% url 'main' %}">
-                  Home
+                <a class="nav-link dropdown-toggl" href="{% url 'about' %}">
+                  About
                 </a>
               </li>
               <li class="nav-item dropdown">
@@ -68,11 +68,7 @@
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="events-grid.html"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
+                   href="tel:+237657684"
                 >
                   Contact
                 </a>
@@ -80,7 +76,7 @@
                 <a
                   class="nav-link dropdown-toggle" href="{% url 'updates' %}"
                 >
-                  Notification
+                  Updates
                 </a>
               </li>
               </li>
@@ -91,12 +87,9 @@
               </li>
               {% else %}
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggl" href="{% url 'index' %}">
-                  Home
+                <a class="nav-link dropdown-toggl" href="">
+                  About
                 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -109,20 +102,16 @@
                 >
                   Contact
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a href="events-grid.html">Events Grid</a></li>
-                  <li><a href="events-grid-2.html">Events Grid Two</a></li>
-                </ul>
               </li>
               {% endif %}
             </ul>
           </div>
         </nav>
       </header>
+        <div class="item">{% block content %} {% endblock %}</div>
       {% comment %} main content {% endcomment %}
 
       <section id="home-slider" class="owl-carousel owl-theme wf100">
-        <div class="item">{% block content %} {% endblock %}</div>
       </section>
       <!--Slider End-->
       <!--Current Projects Start-->
@@ -156,7 +145,7 @@
                     save energy, water, and other resources. Definitely, you can
                     go with this business as it is a nothing but the future.
                   </p>
-                  <a href="#" class="lm">About us</a>
+                  <a href="{% url 'main' %}" class="lm">About us</a>
                 </div>
                 <!--Footer Widget End-->
               </div>
@@ -165,12 +154,11 @@
                 <div class="footer-widget">
                   <h4>Our Promises</h4>
                   <ul class="quick-links">
-                    <li><a href="#">Solar Energy</a></li>
+                    <li><a href="#">Food Availability</a></li>
                     <li><a href="#">Waste Management</a></li>
-                    <li><a href="#">Eco Ideas</a></li>
-                    <li><a href="#">Recycling Materials</a></li>
+                    <li><a href="#">Agric Ideas</a></li>
                     <li><a href="#">Plant Ecology</a></li>
-                    <li><a href="#">Saving Wildlife </a></li>
+                    <li><a href="#">food accessibility</a></li>
                   </ul>
                 </div>
                 <!--Footer Widget End-->
